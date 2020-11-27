@@ -13,7 +13,10 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
+    "test:bare": "jest --no-cache",
+    "test:generate-output": "npm run test:bare -- --json --outputFile=jest-test-results.json",
+    "test": "npm run test:generate-output -- --watch",
+    "test:coverage": "npm run test:bare -- --coverage",
     "lint-fix": "tsdx lint --fix",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -29,6 +32,47 @@
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "rootDir": "src",
+    "collectCoverage": true,
+    "coverageDirectory": "../coverage",
+    "coverageReporters": [
+      "text",
+      "html",
+      "lcov",
+      "cobertura"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 95,
+        "branches": 95,
+        "functions": 95,
+        "lines": 95
+      }
+    },
+    "setupFiles": [
+      "../jest.setup.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ],
+    "moduleNameMapper": {
+      "\\.(ttf|eot|woff|woff2)$": "<rootDir>/__mocks__/file-mock.js"
     }
   },
   "prettier": {
@@ -61,6 +105,10 @@
     "@storybook/addon-storysource": "^6.1.6",
     "@storybook/addons": "^6.1.6",
     "@storybook/react": "^6.1.6",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@types/jest": "^26.0.15",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "autoprefixer": "^9.8.6",
@@ -68,6 +116,9 @@
     "babel-preset-react-app": "^10.0.0",
     "cssnano": "^4.1.10",
     "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-junit": "^12.0.0",
     "postcss": "^7.0.35",
     "postcss-cli": "^8.3.0",
     "react": "^17.0.1",

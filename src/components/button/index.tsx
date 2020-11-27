@@ -23,8 +23,17 @@ const BASE_BUTTON =
 const CONTAINED_BUTTON = `${BASE_BUTTON} bg-purple-600 border border-purple-600 text-white`;
 const OUTLINED_BUTTON = `${BASE_BUTTON} border border-purple-600 text-purple-600`;
 
-const Button: FC<ButtonTypes> = ({ label = 'Some label', outlined }) => (
-  <button className={outlined ? OUTLINED_BUTTON : CONTAINED_BUTTON}>
+const Button: FC<ButtonTypes> = ({
+  label = 'Some label',
+  outlined,
+  onClick,
+}) => (
+  <button
+    className={outlined ? OUTLINED_BUTTON : CONTAINED_BUTTON}
+    onClick={(e) => {
+      onClick(e);
+    }}
+  >
     <span>{label} </span>
   </button>
 );
