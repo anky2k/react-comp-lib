@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, ButtonTypes } from '../../src/components/button';
+import Button, { ButtonTypes } from '../../src/components/button';
 
 const meta: Meta = {
   title: 'Welcome',
@@ -8,6 +8,7 @@ const meta: Meta = {
   argTypes: {
     children: {
       control: {
+        onClick: { action: 'clicked' },
         label: 'text',
         outlined: 'boolean'
       },
