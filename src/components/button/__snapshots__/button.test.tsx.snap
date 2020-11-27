@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render as per given styles 1`] = `
+<DocumentFragment>
+  <button
+    class="rounded outline-none shadow py-3 px-12 font-normal uppercase tracking-wider text-lg bg-purple-600 border border-purple-600 text-white"
+  >
+    <span>
+      Submit 
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`it should render correctly without label 1`] = `
+<DocumentFragment>
+  <button
+    class="rounded outline-none shadow py-3 px-12 font-normal uppercase tracking-wider text-lg bg-purple-600 border border-purple-600 text-white"
+  >
+    <span>
+      Some label 
+    </span>
+  </button>
+</DocumentFragment>
+`;

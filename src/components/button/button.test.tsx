@@ -1,6 +1,8 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import Button from '../button';
+
+afterEach(cleanup);
 
 test('it should render correctly with outlined true option', () => {
   const clickHandler = jest.fn();
@@ -34,4 +36,14 @@ test('it should render correctly without label', () => {
 
   fireEvent.click(getByText('Some label'));
   expect(clickHandler).toHaveBeenCalled();
+});
+
+test('it should render as per given styles', () => {
+  const clickHandler = jest.fn();
+
+  const { asFragment } = render(
+    <Button onClick={clickHandler} label="Submit" />
+  );
+
+  expect(asFragment()).toMatchSnapshot();
 });
