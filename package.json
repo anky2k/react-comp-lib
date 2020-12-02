@@ -50,6 +50,11 @@
     ],
     "rootDir": "src",
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**/*.{ts, tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ], 
     "coverageDirectory": "../coverage",
     "coverageReporters": [
       "text",
