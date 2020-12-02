@@ -6,7 +6,7 @@ exports[`it should render as per given styles 1`] = `
     class="rounded outline-none shadow py-3 px-12 font-normal uppercase tracking-wider text-lg bg-purple-600 border border-purple-600 text-white"
   >
     <span>
-      Submit 
+      Submit
     </span>
   </button>
 </DocumentFragment>

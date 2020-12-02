@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import Button, { ButtonTypes } from '../../src/components/button';
 
 const meta: Meta = {
-  title: 'Welcome',
+  title: 'Button',
   component: Button,
   argTypes: {
     children: {
