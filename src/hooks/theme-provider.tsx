@@ -19,6 +19,8 @@ function usePrevious<T>(theme: T) {
   return ref.current as T;
 }
 
+/* istanbul ignore next */
+
 const ThemeContext = React.createContext({
   theme: 'light',
   toggleTheme: () => {},
