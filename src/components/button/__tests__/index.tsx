@@ -9,9 +9,7 @@ test('it should render correctly with outlined true option', () => {
   const { getByText } = render(
     <Button outlined onClick={clickHandler} label="Submit" />
   );
-
   expect(getByText('Submit')).toBeInTheDocument();
-
   fireEvent.click(getByText('Submit'));
   expect(clickHandler).toHaveBeenCalled();
 });

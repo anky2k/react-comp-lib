@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render as per given styles 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle theme"
+    class="p-2 rounded focus:outline-none"
+    data-testid="astra-theme-switch"
+  >
+    <svg
+      aria-label="Apply dark theme"
+      class="w-5 h-5"
+      data-testid="astra-switcher-light-mode"
+      fill="currentColor"
+      role="image"
+      viewBox="0 0 20 20"
+    >
+      <title
+        id="dark-mode"
+      >
+        switch to dark mode
+      </title>
+      <path
+        d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;

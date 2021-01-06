@@ -5,7 +5,7 @@ export type ButtonTypes = {
    * Label of the button
    */
 
-  label: string;
+  label?: string;
   /**
    * Boolean value to define the button style
    */
@@ -34,7 +34,7 @@ const Button: FC<ButtonTypes> = ({
       onClick(e);
     }}
   >
-    <span>{label} </span>
+    <span>{label}</span>
   </button>
 );
 
