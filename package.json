@@ -124,6 +124,7 @@
     "mock-match-media": "^0.1.4",
     "postcss": "^7.0.35",
     "postcss-cli": "^8.3.0",
+    "prettier": "^2.3.2",
     "react": "^17.0.1",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^17.0.1",
