@@ -11,12 +11,12 @@ const meta: Meta = {
         onClick: { action: 'clicked' },
         label: 'text',
         outlined: 'boolean'
-      },
-    },
+      }
+    }
   },
   parameters: {
-    controls: { expanded: true },
-  },
+    controls: { expanded: true }
+  }
 };
 
 export default meta;

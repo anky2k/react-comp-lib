@@ -7,10 +7,10 @@ import './styles/tailwind.css';
 const App = () => {
   return (
     <div>
-      <Button 
-        onClick={() => console.log('hello world')} 
-        label={"Hello World"} 
-        outlined={false} 
+      <Button
+        onClick={() => console.log('hello world')}
+        label={'Hello World'}
+        outlined={false}
       />
       <Switcher/>
     </div>

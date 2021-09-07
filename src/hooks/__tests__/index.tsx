@@ -57,7 +57,7 @@ it('should allow to use toggle function to change the theme', () => {
 
 it('should load theme basis users preferred color scheme', () => {
   setMedia({
-    'prefers-color-scheme': 'dark',
+    'prefers-color-scheme': 'dark'
   });
   const { getByTestId } = render(<RenderWithTheme />);
   expect(getByTestId('current-theme').innerHTML).toEqual('dark');

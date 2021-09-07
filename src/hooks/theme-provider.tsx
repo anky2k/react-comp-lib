@@ -4,7 +4,7 @@ import React, {
   useRef,
   useLayoutEffect,
   useContext,
-  ReactNode,
+  ReactNode
 } from 'react';
 
 type ThemeProviderType = {
@@ -23,7 +23,8 @@ function usePrevious<T>(theme: T) {
 
 const ThemeContext = React.createContext({
   theme: 'light',
-  toggleTheme: () => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  toggleTheme: () => {}
 });
 
 export const ThemeProvider: React.FC<ThemeProviderType> = ({ children }) => {

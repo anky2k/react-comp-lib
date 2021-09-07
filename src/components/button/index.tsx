@@ -26,7 +26,7 @@ const OUTLINED_BUTTON = `${BASE_BUTTON} border border-purple-600 text-purple-600
 const Button: FC<ButtonTypes> = ({
   label = 'Some label',
   outlined,
-  onClick,
+  onClick
 }) => (
   <button
     className={outlined ? OUTLINED_BUTTON : CONTAINED_BUTTON}

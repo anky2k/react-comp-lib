@@ -4,10 +4,10 @@ import Switcher from '../../src/components/switcher';
 
 const meta: Meta = {
   title: 'Switcher',
-  component: Switcher,  
+  component: Switcher,
   parameters: {
-    controls: { expanded: true },
-  },
+    controls: { expanded: true }
+  }
 };
 
 export default meta;
