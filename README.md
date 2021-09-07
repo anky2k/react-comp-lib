@@ -50,7 +50,7 @@ To run tests, use `npm test` or `yarn test`.
 
 ## Configuration
 
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
+Code quality is set up for you with `eslint`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
 
 ### Jest
 
