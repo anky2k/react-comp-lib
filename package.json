@@ -132,5 +132,7 @@
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@storybook/addon-knobs": "^6.3.1"
+  }
 }
